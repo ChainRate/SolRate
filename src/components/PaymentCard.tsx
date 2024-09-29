@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-const PaymentCard = ({ title }) => (
+interface PaymentCardProps {
+  title: string; // 为 title 添加类型
+}
+
+const PaymentCard: React.FC<PaymentCardProps> = ({ title }) => (
   <div className="bg-white rounded-2xl shadow-md p-6 w-full">
     <h2 className="text-2xl font-bold mb-6 text-black">{title}</h2>
     {[...Array(4)].map((_, index) => (
