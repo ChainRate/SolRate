@@ -9,13 +9,15 @@ import CommentList from '@/components/CommentList';
 import UserAccount from '@/components/UserAccount';
 
 const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
+  // 使用 params.id，例如通过它来获取项目详情
   const projectDetails = {
-    name: "Project Name",
+    id: params.id, // 使用 params.id
+    name: `Project Name ${params.id}`, // 使用 params.id
     rank: "#5 in DeFi",
     description: "Description\nline2\nline3\nline4",
     score: 9.9,
     reviewCount: 5021,
-    image: "/placeholder-project-image.png", // 确保这个路径是正确的
+    image: "/placeholder-project-image.png",
   };
 
   return (
