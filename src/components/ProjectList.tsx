@@ -1,14 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 
-const ProjectList = ({ title }) => {
+interface ProjectListProps {
+  title: string; // 为 title 添加类型
+}
+
+const ProjectList: React.FC<ProjectListProps> = ({ title }) => {
   const projects = [
-    { id: 1, name: 'Name', change: 2, score: 9.9 },
-    { id: 2, name: 'Name', change: 2, score: 9.9 },
-    { id: 3, name: 'Name', change: -2, score: 9.9 },
-    { id: 4, name: 'Name', change: 2, score: 9.9 },
-    { id: 5, name: 'Name', change: -2, score: 9.9 },
-    { id: 6, name: 'Name', change: -2, score: 9.9 },
+    { id: 1, name: 'Name 1', change: 2, score: 9.9 },
+    { id: 2, name: 'Name 2', change: 2, score: 9.9 },
+    { id: 3, name: 'Name 3', change: -2, score: 9.9 },
+    { id: 4, name: 'Name 4', change: 2, score: 9.9 },
+    { id: 5, name: 'Name 5', change: -2, score: 9.9 },
+    { id: 6, name: 'Name 6', change: -2, score: 9.9 },
   ];
 
   return (
