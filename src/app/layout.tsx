@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "AptosRate",
+    title: "ChainRate",
     description: "For Aptos Collision Hackathon",
 };
 
