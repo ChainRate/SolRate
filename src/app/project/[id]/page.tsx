@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Header from "@/components/Layout/Header";
-import Footer from "@/components/Layout/Footer";
 import CommentList from "@/components/CommentList";
+import Footer from "@/components/Layout/Footer";
+import Header from "@/components/Layout/Header";
 import UserAccount from "@/components/UserAccount";
+import Image from "next/image";
+import Link from "next/link";
 
 const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
     // 使用 params.id，例如通过它来获取项目详情
@@ -56,7 +55,7 @@ const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="md:col-span-2">
-                        <CommentList highlightCount={4} totalCount={200} />
+                        <CommentList />
                     </div>
                     <div>
                         <UserAccount />
