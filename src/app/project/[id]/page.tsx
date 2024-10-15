@@ -8,8 +8,6 @@ import Footer from "@/components/Layout/Footer";
 import CommentList from "@/components/CommentList";
 import UserAccount from "@/components/UserAccount";
 
-export const runtime = "edge";
-
 const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
     // 使用 params.id，例如通过它来获取项目详情
     const projectDetails = {

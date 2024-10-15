@@ -5,6 +5,7 @@ import WalletProvider from "@/providers/wallet-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { AutoConnectProvider } from "@/providers/auto-connect-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { ReactQueryProvider } from "@/providers/react-query-provider";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -31,12 +32,14 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                    <AutoConnectProvider>
-                        <WalletProvider>
-                            {children}
-                            <Toaster />
-                        </WalletProvider>
-                    </AutoConnectProvider>
+                    <ReactQueryProvider>
+                        <AutoConnectProvider>
+                            <WalletProvider>
+                                {children}
+                                <Toaster />
+                            </WalletProvider>
+                        </AutoConnectProvider>
+                    </ReactQueryProvider>
                 </ThemeProvider>
             </body>
         </html>
